@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wykłady 4 Rok</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="theme-color" content="#1F1F1F"/>
+</head>
+<body>
+
+    <header>
+        <img src="ikony/ikona-192.png" alt="Logo" class="logo">
+        <h1>Wykłady 4 Rok</h1>
+        <p>Zbiór playlist z wykładami</p>
+    </header>
+
+    <main class="link-container">
+        <a class="playlist-link" href="https://www.youtube.com/playlist?list=PLoO9Fk4af0bi-bpUN1rUYhjyhKRd1akDj" target="_blank">
+            📚 Diagnoza psychologiczna E
+        </a>
+        <a class="playlist-link" href="https://www.youtube.com/playlist?list=PLoO9Fk4af0bgrBuMLyDWaU8HnuQ5NZxV5" target="_blank">
+            🌱 Wspomaganie w rozwoju osobistym i zawodowym
+        </a>
+        <a class="playlist-link" href="LINK_DO_PLAYLISTY" target="_blank">
+            📊 Psychometria
+        </a>
+        <a class="playlist-link" href="https://www.youtube.com/playlist?list=PLoO9Fk4af0bgXyRMYC-X8bYFKMKljiFEn" target="_blank">
+            🧠 Wysoka wrażliwość
+        </a>
+        <a class="playlist-link" href="LINK_DO_PLAYLISTY" target="_blank">
+            🤝 Umiejętności profesjonalne pomagającego
+        </a>
+    </main>
+    
+    <script>
+        // Ten skrypt rejestruje nasz Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker zarejestrowany!', registration);
+                    })
+                    .catch(err => {
+                        console.log('Błąd rejestracji Service Workera: ', err);
+                    });
+            });
+        }
+    </script>
+
+</body>
+</html>
